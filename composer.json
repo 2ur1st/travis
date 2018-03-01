@@ -1,0 +1,27 @@
+{
+  "name": "2ur1st/travis",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Artem Chernov",
+      "email": "vse_chetko@mail.ru"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "6.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Travis\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
+}
