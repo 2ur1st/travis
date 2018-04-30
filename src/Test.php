@@ -6,10 +6,13 @@ class Test
 {
 
     private $name;
+    
+    private $age;
 
     public function __construct($name)
     {
         $this->name = $name;
+        $this->age = 30;
     }
 
     public function getName()
