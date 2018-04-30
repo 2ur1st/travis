@@ -2,6 +2,20 @@ language: php
 php:
   - '7.1'
 install: composer install
+
+
+
 after_success:
   - travis_retry php vendor/bin/php-coveralls
-  - travis_retry php vendor/bin/codacycoverage clover
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - php vendor/bin/phpunit --coverage-clover
+  - ls -la
+  - pwd
+after_script:
+  - mv tests/_output/coverage.xml clover.xml
+  - ./cc-test-reporter after-build --coverage-input-type clover --id 12345 --exit-code $TRAVIS_TEST_RESULT
