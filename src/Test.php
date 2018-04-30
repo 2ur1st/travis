@@ -4,7 +4,9 @@ namespace Travis;
 
 class Test
 {
-
+    /**
+     * @var string
+     */
     private $name;
 
     /**
@@ -19,6 +21,9 @@ class Test
         $this->gender = 'male';
     }
 
+    /**
+     * @return int
+     */
     public function getName()
     {
         return $this->name;
