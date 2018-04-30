@@ -6,13 +6,17 @@ class Test
 {
 
     private $name;
-    
+
+    /**
+     * @var int
+     */
     private $age;
 
     public function __construct($name)
     {
         $this->name = $name;
-        $this->ages = 30;
+        $this->age = "30";
+        $this->gender = 'male';
     }
 
     public function getName()
