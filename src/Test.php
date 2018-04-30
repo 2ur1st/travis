@@ -12,7 +12,7 @@ class Test
     public function __construct($name)
     {
         $this->name = $name;
-        $this->age = 30;
+        $this->ages = 30;
     }
 
     public function getName()
